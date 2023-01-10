@@ -18,8 +18,9 @@ According to my analysis, the majority of employees who are about to retire hold
 
 ![comparing](/Pewlett-Hackard-Analysis/Data/count_vs_title.png?raw=true "retiring_vs_mentoring")
 
-- Addtional queries
-However, I ran the following query to see how many engineers can be promoted to senior engineers. The conditions I emplaced are: 1. The engineer is NOT about to retire, 2. They are currently enrolled as an engineer 3. They have been an engineer before 1/1/2005:
+-- Addtional queries:
+
+I ran the following query to see how many engineers can be promoted to senior engineers. The conditions I emplaced are: 1. The engineer is NOT about to retire, 2. They are currently enrolled as an engineer 3. They have been an engineer before 1/1/2005:
 
 select distinct on (titles.emp_no) titles.emp_no, titles.title, titles.from_date, titles.to_date, employees.birth_date
 into promote_senior_eng
